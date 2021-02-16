@@ -1,10 +1,10 @@
-GPU=0
-CUDNN=0
-CUDNN_HALF=0
-OPENCV=0
+GPU=1
+CUDNN=1
+CUDNN_HALF=1
+OPENCV=1
 AVX=0
 OPENMP=0
-LIBSO=0
+LIBSO=1
 ZED_CAMERA=0
 ZED_CAMERA_v2_8=0
 
@@ -121,8 +121,12 @@ ifeq ($(OS),Darwin) #MAC
 CFLAGS+= -DCUDNN -I/usr/local/cuda/include
 LDFLAGS+= -L/usr/local/cuda/lib -lcudnn
 else
-CFLAGS+= -DCUDNN -I/usr/local/cudnn/include
-LDFLAGS+= -L/usr/local/cudnn/lib64 -lcudnn
+#CFLAGS+= -DCUDNN -I/usr/local/cudnn/include
+#LDFLAGS+= -L/usr/local/cudnn/lib64 -lcudnn
+
+
+CFLAGS+= -DCUDNN -I/usr/include
+LDFLAGS+= -L/usr/lib -lcudnn
 endif
 endif
 
