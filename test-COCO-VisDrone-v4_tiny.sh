@@ -1,0 +1,1 @@
+./darknet detector test ./cst-COCO_VisDrone/COCO_VisDrone.data ./cst-COCO_VisDrone/yolov4-tiny-cst-COCO-VisDrone.cfg ./cst-COCO_VisDrone/backup/yolov4-tiny-cst-COCO-VisDrone_11000.weights  -thresh 0.1

@@ -1,0 +1,5 @@
+classes= 4
+train = cst-VisDrone/train.txt
+valid = cst-VisDrone/valid.txt
+names = cst-VisDrone/VisDrone.names
+backup = cst-VisDrone/backup
